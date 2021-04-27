@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap');
+
+@import "mixins";
+@import "vars";
+
+%container {
+    width: 80%;
+    padding: 0 10%;
+    
+}
+
+%flexDisplay {
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #fff;
+    color: $textColor;
+    }
+
+header{
+    @extend %container;
+    @extend %flexDisplay;
+    align-items: center;
+    height: 100px;
+    background-color: aqua;
+
+    .logo{
+        @extend %flexDisplay;
+        width: auto;
+        height: 100px;
+        align-items: center;
+
+
+
+        .logo__img{
+            background: url(/img/logo_img.png) no-repeat;
+            background-position: -3px -4px;
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            border: 2px solid rgb(138, 41, 41) 
+        }
+        p{
+            font-family: 'IBM Plex Serif', serif;
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 24px;
+            
+            > span{
+                color: red;
+            }
+        }
+
+    }
+
+}
